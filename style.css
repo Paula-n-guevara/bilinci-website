@@ -1,0 +1,79 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 1rem;
+}
+
+.logo {
+    width: 150px;
+    height: auto;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: #eaf2f1;
+}
+
+.intro-video {
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Sections */
+.section {
+    padding: 2rem;
+    text-align: center;
+}
+
+h2 {
+    color: #00796b;
+}
+
+.benefit {
+    margin: 1rem 0;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    width: 80%;
+    max-width: 400px;
+    margin-top: 0.5rem;
+}
+
+button[type="submit"] {
+    margin-top: 1rem;
+    background-color: #00796b;
+    color: white;
+}
