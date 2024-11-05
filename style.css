@@ -32,17 +32,13 @@ nav {
 .logo {
     width: 60px;
     height: 60px;
-    border-radius: 50%; /* Makes the logo circular */
+    border-radius: 50%;
 }
 
 nav ul {
     list-style: none;
     display: flex;
     gap: 1.5rem;
-}
-
-nav ul li {
-    display: inline;
 }
 
 nav ul li a {
@@ -56,33 +52,30 @@ nav ul li a:hover {
     color: #005f57;
 }
 
-h1, h2 {
-    color: #00796b;
-}
-
-/* Section Styles */
+/* Problem Section */
 .section {
     padding: 3rem 2rem;
     text-align: center;
-    animation: fadeIn 1s ease-in;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+/* Interactive Counter */
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2rem;
+    color: #00796b;
 }
 
-/* Problem Section */
-#problem {
-    background-color: #fdfdfd;
-    color: #555;
-    border-top: 5px solid #00796b;
-    border-bottom: 5px solid #00796b;
+.counter {
+    font-size: 3rem;
+    font-weight: bold;
+    animation: countUp 2s ease-in-out forwards;
 }
 
 /* Solution Section */
 .hero {
-    background-color: #8fa692; /* More vibrant color */
+    background-color: #8fa692;
     padding: 4rem 2rem;
     color: #333;
 }
@@ -92,65 +85,4 @@ h1, h2 {
     max-width: 600px;
     border-radius: 10px;
     margin-top: 1rem;
-}
-
-button {
-    padding: 0.7rem 1.5rem;
-    margin-top: 1rem;
-    cursor: pointer;
-    background-color: #00796b;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #005f57;
-}
-
-/* Waitlist Section */
-#waitlist {
-    background-color: #eaf2f1;
-    border-top: 3px solid #b7c8b2;
-    padding: 3rem 2rem;
-}
-
-.waitlist-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 400px;
-    margin: 0 auto;
-}
-
-.waitlist-form input {
-    padding: 0.8rem;
-    width: 100%;
-    max-width: 300px;
-    margin: 0.5rem 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.waitlist-form button {
-    background-color: #00796b;
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.waitlist-form button:hover {
-    background-color: #005f57;
-}
-
-/* Footer */
-footer {
-    padding: 1rem;
-    background-color: #00796b;
-    color: white;
-    text-align: center;
 }
