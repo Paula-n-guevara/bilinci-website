@@ -8,11 +8,12 @@ document.addEventListener("DOMContentLoaded", () => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
 
-            const increment = target / 100;
+            // Adjust speed by changing 'increment' calculation
+            const increment = target / 200;
 
             if (count < target) {
                 counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCounter, 50);
+                setTimeout(updateCounter, 10);
             } else {
                 counter.innerText = target;
             }
