@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bilinci - Real-Time Classroom Translation</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -18,33 +17,52 @@
                 <li><a href="about.html">About Bilinci</a></li>
             </ul>
         </nav>
-        <h1>Bilinci: Bridging Language Gaps in Real-Time for K-12 Education</h1>
     </header>
 
-    <!-- Problem Section with Interactive Counter -->
-    <section id="problem" class="section">
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Bilinci: Bridging Language Gaps in Real-Time for K-12 Education</h1>
+        <p>Empowering ESL students through innovative AI technology.</p>
+        <a href="#waitlist" class="cta-button">Join the Waitlist</a>
+    </section>
+
+    <!-- Problem Section with Enhanced Content -->
+    <section id="problem" class="section problem-section">
         <h2>The Problem</h2>
-        <p>Language barriers in classrooms prevent ESL students from fully engaging in lessons, impacting their learning and development.</p>
-        <div class="counter-container">
-            <div class="counter" data-target="10">0</div>
-            <p>Students left behind each day due to language barriers.</p>
+        <div class="stats-container">
+            <div class="stat">
+                <img src="icon_students.png" alt="Students Icon">
+                <div class="counter" data-target="5">0</div>
+                <p>Million ESL students struggle daily</p>
+            </div>
+            <div class="stat">
+                <img src="icon_teachers.png" alt="Teachers Icon">
+                <div class="counter" data-target="70">0</div>
+                <p>% of teachers feel unprepared for ESL instruction</p>
+            </div>
+            <div class="stat">
+                <img src="icon_dropout.png" alt="Dropout Icon">
+                <div class="counter" data-target="25">0</div>
+                <p>% higher dropout rate among ESL students</p>
+            </div>
         </div>
+        <p>Language barriers in classrooms prevent ESL students from fully engaging in lessons, impacting their academic performance and future opportunities.</p>
     </section>
 
     <!-- Solution Section -->
-    <section id="solution" class="section hero">
+    <section id="solution" class="section solution-section">
         <h2>The Solution</h2>
         <p>Introducing Bilinci – AI-powered real-time translation and transcription to bridge language gaps in education.</p>
         <video controls class="intro-video">
-            <source src="Bilinci Demo - Nov 4.mov" type="video/mp4">
+            <source src="Bilinci_Demo_Nov4.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
 
     <!-- Waitlist Section -->
-    <section id="waitlist" class="section">
+    <section id="waitlist" class="section waitlist-section">
         <h2>Join the Waitlist</h2>
-        <p>Be the first to know when Bilinci launches! Join our waitlist to receive updates and news.</p>
+        <p>Be the first to experience Bilinci. Sign up to receive updates and early access opportunities.</p>
         <form action="https://formspree.io/f/manyerba" method="POST" class="waitlist-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Your Email" required>
@@ -52,6 +70,7 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Bilinci. All rights reserved.</p>
     </footer>
