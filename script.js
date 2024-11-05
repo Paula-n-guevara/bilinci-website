@@ -1,25 +1,24 @@
-// Smooth Scroll Function
-function scrollToSection(id) {
-    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-}
-
-// Counter Animation
 document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
+
     counters.forEach(counter => {
-        const updateCount = () => {
-            const target = +counter.getAttribute("data-target");
+        counter.innerText = '0';
+
+        const updateCounter = () => {
+            const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
-            const speed = 200; // Speed of counting animation
+
+            // Adjust speed by changing 'increment' calculation
+            const increment = target / 200;
 
             if (count < target) {
-                counter.innerText = count + 1;
-                setTimeout(updateCount, speed / target);
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCounter, 10);
             } else {
                 counter.innerText = target;
             }
         };
 
-        updateCount();
+        updateCounter();
     });
 });
