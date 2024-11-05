@@ -36,18 +36,21 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
     });
-
-    // Counter animation effect
+document.addEventListener("DOMContentLoaded", () => {
     const counters = document.querySelectorAll(".counter");
+
     counters.forEach(counter => {
-        const target = +counter.getAttribute("data-target");
-        const increment = Math.ceil(target / 200); // Adjust speed by changing the divisor
+        counter.innerText = '0';
 
         const updateCounter = () => {
-            const current = +counter.innerText;
-            if (current < target) {
-                counter.innerText = current + increment;
-                setTimeout(updateCounter, 20);
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+
+            const increment = target / 100;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(updateCounter, 50);
             } else {
                 counter.innerText = target;
             }
