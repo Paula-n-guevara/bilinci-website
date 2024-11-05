@@ -1,23 +1,21 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const counters = document.querySelectorAll(".counter");
+    const translatableElements = document.querySelectorAll(".translatable");
 
-    counters.forEach(counter => {
-        counter.innerText = '0';
+    translatableElements.forEach(element => {
+        element.addEventListener("mouseenter", () => {
+            const translation = element.getAttribute("data-translation");
+            const tooltip = document.createElement("div");
+            tooltip.classList.add("tooltip");
+            tooltip.innerText = translation;
 
-        const updateCounter = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
+            element.appendChild(tooltip);
+        });
 
-            const increment = target / 100;
-
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCounter, 50);
-            } else {
-                counter.innerText = target;
+        element.addEventListener("mouseleave", () => {
+            const tooltip = element.querySelector(".tooltip");
+            if (tooltip) {
+                tooltip.remove();
             }
-        };
-
-        updateCounter();
+        });
     });
 });
