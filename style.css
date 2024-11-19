@@ -8,13 +8,24 @@
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9fafc;
-    color: #333;
+    background-color: #f7faf7;
+    color: #2c3e50;
+}
+
+/* Color Palette */
+:root {
+    --green-dark: #2a6041;
+    --green-medium: #5cb85c;
+    --green-light: #dff0d8;
+    --green-hover: #3d764d;
+    --white: #ffffff;
+    --grey-light: #f8f9fa;
+    --grey-dark: #343a40;
 }
 
 /* Header and Navigation */
 header {
-    background-color: #2c3e50;
+    background-color: var(--green-dark);
     padding: 1rem 2rem;
     position: sticky;
     top: 0;
@@ -47,47 +58,26 @@ header ul {
     gap: 1.5rem;
 }
 
-header ul li {
-    position: relative;
-}
-
 header ul li a {
     text-decoration: none;
-    color: #f4f7f6;
+    color: var(--white);
     font-weight: bold;
     padding: 0.5rem 1rem;
-    transition: background-color 0.3s, color 0.3s;
     border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 header ul li a:hover {
-    background-color: #f4f7f6;
-    color: #2c3e50;
-}
-
-/* Dropdown Hover Effect */
-header ul li:hover > ul {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #2c3e50;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
-    border-radius: 5px;
-}
-
-header ul li ul {
-    display: none;
-    list-style: none;
+    background-color: var(--white);
+    color: var(--green-dark);
 }
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(to bottom, #34495e, #2c3e50);
-    color: #fff;
+    background: linear-gradient(to bottom, var(--green-dark), var(--green-medium));
+    color: var(--white);
     text-align: center;
-    padding: 4rem 2rem;
+    padding: 5rem 2rem;
 }
 
 .hero h1 {
@@ -101,8 +91,8 @@ header ul li ul {
 }
 
 .hero .cta-button {
-    background-color: #e74c3c;
-    color: #fff;
+    background-color: var(--green-medium);
+    color: var(--white);
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border: none;
@@ -112,7 +102,7 @@ header ul li ul {
 }
 
 .hero .cta-button:hover {
-    background-color: #c0392b;
+    background-color: var(--green-hover);
 }
 
 /* Section Styling */
@@ -123,7 +113,7 @@ header ul li ul {
 }
 
 .section h2 {
-    color: #2c3e50;
+    color: var(--green-dark);
     font-size: 2rem;
     margin-bottom: 2rem;
     text-align: center;
@@ -138,7 +128,7 @@ header ul li ul {
 
 /* Problem Section */
 .problem-section {
-    background-color: #e8f5e9;
+    background-color: var(--green-light);
 }
 
 .stats-container {
@@ -154,7 +144,7 @@ header ul li ul {
     margin: 1rem 0;
     padding: 1rem;
     border-radius: 8px;
-    background-color: #fff;
+    background-color: var(--white);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -171,14 +161,14 @@ header ul li ul {
 
 .counter {
     font-size: 2rem;
-    color: #2c3e50;
+    color: var(--green-dark);
     margin-bottom: 0.5rem;
     font-weight: bold;
 }
 
 /* Solution Section */
 .solution-section {
-    background-color: #fdfdfd;
+    background-color: var(--white);
     text-align: center;
 }
 
@@ -192,7 +182,7 @@ header ul li ul {
 
 /* Waitlist Section */
 .waitlist-section {
-    background-color: #f4f7f6;
+    background-color: var(--grey-light);
     text-align: center;
 }
 
@@ -213,8 +203,8 @@ header ul li ul {
 }
 
 .waitlist-form button {
-    background-color: #2ecc71;
-    color: #fff;
+    background-color: var(--green-medium);
+    color: var(--white);
     padding: 0.8rem 1.5rem;
     font-size: 1rem;
     border: none;
@@ -224,14 +214,14 @@ header ul li ul {
 }
 
 .waitlist-form button:hover {
-    background-color: #27ae60;
+    background-color: var(--green-hover);
     transform: scale(1.05);
 }
 
 /* Footer */
 footer {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: var(--green-dark);
+    color: var(--white);
     padding: 1rem 2rem;
     text-align: center;
 }
