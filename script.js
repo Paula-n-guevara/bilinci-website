@@ -1,24 +1,37 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Counter animation
     const counters = document.querySelectorAll(".counter");
-
     counters.forEach(counter => {
-        counter.innerText = '0';
-
         const updateCounter = () => {
-            const target = +counter.getAttribute('data-target');
-            const count = +counter.innerText;
+            const target = +counter.getAttribute("data-target");
+            const current = +counter.innerText;
+            const increment = Math.ceil(target / 100);
 
-            // Adjust speed by changing 'increment' calculation
-            const increment = target / 200;
-
-            if (count < target) {
-                counter.innerText = Math.ceil(count + increment);
-                setTimeout(updateCounter, 10);
+            if (current < target) {
+                counter.innerText = current + increment;
+                setTimeout(updateCounter, 20);
             } else {
                 counter.innerText = target;
             }
         };
 
         updateCounter();
+    });
+
+    // Tooltip interaction
+    const translatableElements = document.querySelectorAll(".translatable");
+    translatableElements.forEach(element => {
+        element.addEventListener("mouseenter", () => {
+            const translation = element.getAttribute("data-translation");
+            const tooltip = document.createElement("div");
+            tooltip.classList.add("tooltip");
+            tooltip.innerText = translation;
+            element.appendChild(tooltip);
+        });
+
+        element.addEventListener("mouseleave", () => {
+            const tooltip = element.querySelector(".tooltip");
+            if (tooltip) tooltip.remove();
+        });
     });
 });
